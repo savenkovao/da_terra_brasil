@@ -1,0 +1,84 @@
+.socials{
+	position: fixed;
+	width: 22px;
+	top: 100px;
+	right: 2%;
+
+	@media @laptop{
+		right: 50%;
+		top: 150px;
+		margin-right: -490px;
+	}
+	@media @laptopL{
+		margin-right: -580px;
+	}
+	@media @4k{
+		margin-right: -735px;
+	}
+
+	>ul {
+		>li{
+			margin-bottom: 10px;
+
+			@media @laptop {
+				margin-bottom: 3px;
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+
+				&:nth-child(1){
+					a {
+						background-position: 0 0;
+					}
+				}
+
+				&:nth-child(2){
+					a {
+						background-position: 0 -25px;
+					}
+				}
+
+				&:nth-child(3){
+					a {
+						background-position: 0 -50px;
+					}
+				}
+
+				&:nth-child(4){
+					a {
+						background-position: 0 -75px;
+					}
+				}
+
+				&:nth-child(5){
+					a {
+						background-position: 0 -100px;
+					}
+				}
+
+				&:nth-child(6){
+					a {
+						background-position: 0 -125px;
+					}
+				}
+
+			>a{
+				display: block;
+				width: 32px;
+				height: 32px;
+				.setBackgroundImage(@socials);
+
+				// @media @laptop {
+					width: 22px;
+					height: 22px;
+				// }
+			}
+		}
+		
+	}
+
+
+	
+}

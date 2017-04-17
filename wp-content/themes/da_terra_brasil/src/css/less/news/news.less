@@ -1,0 +1,186 @@
+.news {
+	background-color: #c2c2c2;
+}
+
+.news__cnt {
+	padding: 35px 30px 70px;
+}
+
+.news-hdr {
+	display: inline-block;
+	color: #000;
+	font-size: 14px;
+}
+.news-lk {
+	margin-left: 18px; 
+	color: #000;
+	font-size: 14px;
+	text-decoration: underline;
+}
+
+.news-block {
+	
+}
+
+.news-item {
+	width: 100%;
+	position: relative;
+	
+
+	@media @tablet {
+		width: 50%;
+		float: left;
+		padding-left: 35px;
+	}
+}
+
+.news-item__cnt{
+	max-width: 475px;
+}
+
+.news-item__date {
+	display: inline-block;
+	margin-top: 57px;
+	padding: 13px 26px;
+	background-color: #fff;
+	color: #000;
+	font-size: 24px;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+
+.news-item__cont {
+	position: relative;
+	padding-left: 17px;
+	padding-bottom: 56px;
+	margin-top: 20px;
+	min-height: 310px;
+	max-height: 350px;
+}
+.news-item__hdr {
+	color: #fff;
+	font-size: 24px;
+	max-height: 72px;
+	overflow: hidden;
+}
+.news-item__txt {
+	margin-top: 25px;
+	color: #fff;
+	font-size: 16px;
+	max-height: 100px;
+	overflow: hidden;
+}
+
+.news-item__txt-lk {
+	color: #fff;
+	text-decoration: none;
+}
+
+.news-item__btn-cnt {
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-top: 35px;
+	text-align: center;
+	font-size:0;
+	white-space: nowrap;
+
+	@media @laptop{
+		text-align: left;
+		padding-left: 17px;
+	}
+	@media @laptopL{
+		margin-top: 0;
+	}
+	@media @4k{
+	}
+}
+
+.news-item__btn {
+	display: inline-block;
+	position: relative;
+	width: 80%;
+	min-width: 160px;
+	max-width: 240px;
+	padding: 16px;	
+	background-color: @main-color-green;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: 300;
+	text-decoration: none;
+	vertical-align: middle;
+
+	@media @tablet {
+		width: 53.5%;
+	}
+
+}
+
+.news-item__btn-dd {
+	display: inline-block;
+	width: 11px;
+	height: 7px;
+	padding: 28px 16px;
+	background-color: @main-color-green;
+	color: #fff;
+	position: relative;
+	vertical-align: middle;
+
+	&:hover >ul{
+		height: auto;
+		padding: 15px;
+	}
+
+	>ul {
+		height: 0;
+		display: inline-block;
+		position: absolute;
+		padding: 0;
+		top: 56px;
+		right: 0;
+		background-color: @main-color-green;
+		transition: all 0.2s linear;
+		overflow: hidden;
+		z-index: 10;
+
+
+		@media @laptop {
+			left: 0;
+			right: auto;
+		}
+
+		>li {
+			line-height: 1.5;
+			min-width: 100px;
+
+			>a {
+				color: #fff;
+				text-decoration: none;
+				font-size: 16px;
+
+				&:hover {
+					color: #0b381e;
+				}
+			}
+		}
+	}
+
+
+	&::after {
+		content: '';
+		width: 11px;
+		height: 7px;
+		display: inline-block;
+		.setBackgroundImage(@dd-arrw);
+		background-size: 11px;
+		background-position: 0 -7px;
+		position: absolute;
+		right: 50%;
+		top: 50%;
+		margin-top: -4px;
+		margin-right: -5px;
+	}
+}

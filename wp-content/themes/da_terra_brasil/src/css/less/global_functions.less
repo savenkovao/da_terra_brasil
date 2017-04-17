@@ -1,0 +1,90 @@
+.setBackgroundImage(@url, @backGround:transparent){
+	background-image: url(@url);
+	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-size: cover;
+ 	background-color: @backGround;
+}
+
+.setBackgroundWImg(){
+	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-size: cover;
+ 	background-color: transparent;
+}
+
+.setBorder(@weight, @color, @radius){
+	border: @weight solid @color;
+	border-radius: @radius; 
+}
+
+.top(@parent, @operator:"-", @child){
+	top: @parent;
+	top: ~"calc(@{parent}"~"@{operator}"~"@{child})";
+}
+.bottom(@parent, @operator:"-", @child){
+	bottom: @parent;
+	bottom: ~"calc(@{parent}"~"@{operator}"~"@{child})";
+}
+
+.left(@parent, @operator:"-", @child, @default:@parent){
+	left: @default;
+	left: ~"calc(@{parent}"~"@{operator}"~"@{child})";
+}
+
+.right(@parent, @operator:"-", @child, @default:@parent){
+	right: @default;
+	right: ~"calc(@{parent}"~"@{operator}"~"@{child})";
+}
+
+.height(@parent, @operator:"-", @child){
+	height: @parent;
+	height: ~"calc(@{parent}"~"@{operator}"~"@{child})";
+}
+
+.transition(@target, @time, @type:linear){
+	transition: @target @time @type;
+}
+
+.setButton (@text-color) when (@text-color = #ffffff){
+	background-color: @btn-background-color;
+	border: 0px solid transparent;
+	color: #ffffff;
+	transition: background-color 0.2s linear;
+
+	&:active,
+	&:hover{
+		background-color: darken(#6b9e3d, 5%);
+	}
+}
+
+.setButton (@text-color) when (@text-color = @btn-background-color){
+	background-color: transparent;
+	border: 2px solid @btn-background-color;
+	color: @btn-background-color;
+	transition: background-color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0), color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0);
+
+	&:active,
+	&:hover{
+		background-color: @btn-background-color;
+		color: white;
+	}
+
+}
+
+.setButton (@text-color) when (@text-color = #272929){
+	background-color: transparent;
+	border: 2px solid #272929;
+	color: #272929;
+	transition: background-color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0), color 0.2s cubic-bezier(0.1, -0.6, 0.2, 0);
+
+	&:active,
+	&:hover{
+		background-color: @btn-background-color;
+		color: white;
+		border: 2px solid  @btn-background-color;
+	}
+}
+
+
+

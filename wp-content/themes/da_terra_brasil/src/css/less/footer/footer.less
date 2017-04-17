@@ -1,0 +1,82 @@
+.footer {
+	background-color: @main-color-blue;
+	color: #fff;
+
+}
+
+.footer-cnt {
+	position: relative;
+	padding: 17px 0;
+
+	@media @tablet {
+		padding: 54px 0 17px;
+	}
+}
+.footer-logo {
+	width: 108px;
+	height: 60px;
+	.setBackgroundImage(@footer-logo);
+	margin: 0 auto;
+
+	@media @tablet {
+		position: absolute;
+		margin-top: -30px;	
+		left: 0;
+		top: 50%;
+	}
+}
+
+.footet-txt{
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+	margin-top: 10px;
+
+	@media @tablet {
+		margin-top: 0;
+	}
+}
+
+.footet-txt_apper {
+	margin-right: 15px;
+	position: relative;
+	display: block;
+	text-align: center;
+
+	@media @tablet {
+		display: inline-block;
+		// text-align: left;
+
+		&:last-child{
+			margin-right: 0;
+
+			&::after {
+				content: '';
+			}
+		}
+
+		&::after {
+			content: '•';
+			position: absolute;
+			margin-left: 7.5px;
+
+		}
+	}
+
+
+}
+
+.footer-txt__pol {
+	& a {
+		color: #fff;
+	}
+}
+
+.footer-txt__copy {}
+.footer-txt__rights {}
+.footer-txt__year {}
+
+
+
+
+

@@ -1,0 +1,20 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	position: relative;
+	font-size: @basic-font-size;
+	font-family: @main-font-family;
+}
+
+.disable{
+	display: none !important;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}

@@ -1,0 +1,73 @@
+//site name and logo (optional)
+.title-1{
+	display: inline-block;	
+	user-select: none;
+}
+.title-1__h1{
+	margin: 0;
+	cursor: default;
+	
+}
+
+.title-1__img{
+	.setBackgroundImage(@h1-logo-img, @backGround:transparent);
+	background-size: contain;
+}
+
+
+//site tagline
+.title-2{	
+	user-select: none;
+}
+
+.title-2__h2{
+	margin: 0;	
+	cursor: default;
+	text-align: center;
+}
+
+// site headings (of different sections)
+
+.title-3{
+	text-align: left;
+}
+
+.title-3__h3{
+
+	font-size: @h3-font-size;
+	line-height: 1;
+	font-weight: 500;    
+	font-family: "Fira Sans Extra Condensed", sans-serif;
+	user-select: none;
+	cursor: default;
+}
+
+.title-3__h3_dark{
+	color: #3d3d3d;
+	&:before {
+		background-color: @main-color;
+	}
+}
+
+.title-3__h3_light{
+	color: #ffffff;
+	&:before {
+		background-color: #ffffff;
+	}
+}
+
+
+
+
+.hr-line {
+	margin-bottom: 15px;
+	position: relative;
+	&::before{
+		content: '';
+		width: @hr-line-width;
+		height: @hr-line-height;		
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+	}
+}

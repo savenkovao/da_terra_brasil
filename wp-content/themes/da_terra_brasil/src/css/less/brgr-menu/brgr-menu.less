@@ -1,0 +1,36 @@
+.brgr-menu{
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;		
+	z-index: 2;
+	top: 0;
+  left: 15px;
+
+	@media @tablet{
+		display: none;
+	}
+
+}
+
+.brgr-menu__stick {
+	display: block;
+	height: 16%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	transition: all 0.1s linear;
+	
+	@media @tablet{
+		display: none;		
+	}
+	
+}
+.stick-1{
+	top: 0;
+}
+.stick-2{
+	top: ~"calc(50% - 8%)";
+}
+.stick-3{
+	bottom: 0;
+}
